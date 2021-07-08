@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import NavBar from './Navbar/Navbar'
+//Components
+import NavBar from './Navbar/NavbarComponent'
+import MainHero from './MainHero/MainHeroComponent'
 
 
 class Main extends Component {
@@ -7,8 +9,8 @@ class Main extends Component {
     return (
       <div>
         <NavBar />
+        <MainHero/>
           <ul>
-            <li>Nav</li>
             <li>Header</li>
             <li>Redirect to Donut Menu</li>
             <li>Redirect to Drink Menu</li>
