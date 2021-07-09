@@ -20,16 +20,17 @@ function Main(props) {
           path="/donuts"
           render={(donuts) => <DonutMenu donuts={props.donuts} />}
         />
-        <Route exact path="/drinks" component={DrinkMenu} />
+        <Route 
+          exact 
+          path="/drinks" 
+          render={(drinks) => <DrinkMenu drinks={props.drinks} /> } />
         <Route exact path="/checkout" component={Checkout} />
         <Redirect to="/home" />
       </Switch>
 
       <p>To Do List For App</p>
       <ol>
-        <li>Make Donut Menu</li>
         <li>functions where you can add items to cart</li>
-        <li>Make Drink Menu</li>
         <li>Cart/Checkout Component</li>
         <li>Cart Badge</li>
         <li>
@@ -41,6 +42,7 @@ function Main(props) {
           When toggling viewports, can we hide shopping cart icon and replace
           with text?
         </li>
+        <li>Get cards to stay at fixed length when viewports get larger</li>
       </ol>
     </div>
   );

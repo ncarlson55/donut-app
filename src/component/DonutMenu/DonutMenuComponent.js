@@ -29,9 +29,7 @@ function DonutMenu(props) {
 
   return (
     <Container fluid>
-      <Row>
-        {donutCard}
-      </Row>
+      <Row>{donutCard}</Row>
     </Container>
   );
 }
