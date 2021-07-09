@@ -13,10 +13,10 @@ const MainHero = () => {
           <Container>
               <Row>
                 <Col>
-                    <Button>Donut Menu</Button>
+                    <Button href="/donuts">Donut Menu</Button>
                 </Col>
                 <Col>
-                    <Button>Drink Menu</Button>
+                    <Button href="/drinks">Drink Menu</Button>
                 </Col>
               </Row>
           </Container>

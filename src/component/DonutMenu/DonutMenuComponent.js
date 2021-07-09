@@ -4,7 +4,7 @@ class DonutMenu extends Component {
     render() {
         return (
             <div>
-                
+                Donuts
             </div>
         )
     }

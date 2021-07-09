@@ -1,13 +1,9 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 class DrinkMenu extends Component {
-    render() {
-        return (
-            <div>
-                
-            </div>
-        )
-    }
+  render() {
+    return <div>Drinks</div>;
+  }
 }
 
 export default DrinkMenu;
