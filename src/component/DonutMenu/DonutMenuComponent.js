@@ -1,13 +1,16 @@
-import React, { Component } from 'react'
+import React from 'react';
 
-class DonutMenu extends Component {
-    render() {
-        return (
-            <div>
-                Donuts
-            </div>
-        )
-    }
+function DonutMenu(props) {
+  console.log(props.donuts);
+  return (
+    <div>
+      {props.donuts.map((donut) => (
+        <li key={donut.id}>
+          {donut.name}, {donut.price}
+        </li>
+      ))}
+    </div>
+  );
 }
 
 export default DonutMenu;
