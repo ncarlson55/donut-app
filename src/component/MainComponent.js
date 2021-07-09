@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 //Components
 import NavBar from './Navbar/NavbarComponent';
 import MainHero from './MainHero/MainHeroComponent';
-import DonutMenu from './DonutMenu/DonutMenuComponent'
-import DrinkMenu from './DrinkMenu/DrinkMenuComponent'
-import Checkout from './Checkout/Checkout'
+import DonutMenu from './DonutMenu/DonutMenuComponent';
+import DrinkMenu from './DrinkMenu/DrinkMenuComponent';
+import Checkout from './Checkout/Checkout';
 
 //React Router
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
@@ -19,7 +19,7 @@ class Main extends Component {
           <Route exact path="/donuts" component={DonutMenu} />
           <Route exact path="/drinks" component={DrinkMenu} />
           <Route exact path="/checkout" component={Checkout} />
-          <Redirect to='/home' />
+          <Redirect to="/home" />
         </Switch>
 
         <p>To Do List For App</p>
@@ -29,9 +29,15 @@ class Main extends Component {
           <li>Make Drink Menu</li>
           <li>Cart/Checkout Component</li>
           <li>Cart Badge</li>
-          <li>Checkout Component, Click on cart can slide a drawer with checkout button can the route to ShoppingCart Component, rename later</li>
+          <li>
+            Checkout Component, Click on cart can slide a drawer with checkout
+            button can the route to ShoppingCart Component, rename later
+          </li>
           <li>State managment, Redux maybe?</li>
-          <li>When toggling viewports, can we hide shopping cart icon and replace with text?</li>
+          <li>
+            When toggling viewports, can we hide shopping cart icon and replace
+            with text?
+          </li>
         </ol>
       </div>
     );
