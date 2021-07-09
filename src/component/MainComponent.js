@@ -18,16 +18,21 @@ function Main(props) {
         <Route
           exact
           path="/donuts"
-          render={(donuts) => <DonutMenu donuts={props.donuts} />}
+          render={(donuts) => <DonutMenu donuts={props.donuts} onAdd={props.onAdd}/>}
         />
-        <Route 
-          exact 
-          path="/drinks" 
-          render={(drinks) => <DrinkMenu drinks={props.drinks} /> } />
-        <Route exact path="/checkout" component={Checkout} />
+        <Route
+          exact
+          path="/drinks"
+          render={(drinks) => <DrinkMenu drinks={props.drinks} onAdd={props.onAdd}/>}
+        />
+        {/* <Route
+          exact
+          path="/checkout"
+          render={(cartItems) => <Checkout cartItems={props.cartItems} onAdd={props.onAdd}/>}
+        /> */}
         <Redirect to="/home" />
       </Switch>
-
+      <Checkout cartItems={props.cartItems} onAdd={props.onAdd}/>
       <p>To Do List For App</p>
       <ol>
         <li>functions where you can add items to cart</li>
@@ -43,6 +48,7 @@ function Main(props) {
           with text?
         </li>
         <li>Get cards to stay at fixed length when viewports get larger</li>
+        <li>Optional: Dry Principle, can we map out our routers???</li>
       </ol>
     </div>
   );

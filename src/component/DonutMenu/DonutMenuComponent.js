@@ -20,7 +20,7 @@ function DonutMenu(props) {
           <CardBody>
             <CardTitle tag="h6">{donut.name}</CardTitle>
             <CardText>${donut.price}</CardText>
-            <Button>Add To Cart</Button>
+            <Button onClick={() => props.onAdd(donut)}>Add To Cart</Button>
           </CardBody>
         </Card>
       </Col>
