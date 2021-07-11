@@ -21,9 +21,11 @@ const NavBar = () => {
   return (
     <div>
       <Navbar color="dark" dark expand="md">
-        <NavbarBrand href="/home">
-          <FreeBreakfastIcon />
-          JiffyDonut
+        <NavbarBrand>
+          <NavLink to="/home">
+            <FreeBreakfastIcon />
+            JiffyDonut
+          </NavLink>
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>

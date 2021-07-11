@@ -43,6 +43,7 @@ function Main(props) {
           When toggling viewports, can we hide shopping cart icon and replace
           with text?
         </li>
+        <li>Styling</li>
         <li>Get cards to stay at fixed length when viewports get larger</li>
         <li>Fix id issue.</li>
         <li>Optional: Dry Principle, can we map out our routers???</li>
