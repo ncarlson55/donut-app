@@ -12,6 +12,7 @@ function App() {
 
   //Set state
   const [cartItems, setCartItems] = useState([]);
+
   //Add to Cart function to pass down to DonutMenu and DrinkMenu Component
   const onAdd = (product) => {
     //Variable that checks if Item already exist in our cart
@@ -29,6 +30,23 @@ function App() {
     }
   };
 
+  //Remove from Cart function, passing down only to Checkout component
+  const onRemove = product => {
+    //Variable that checks if Item already exist in our cart
+    const exist = cartItems.find((x) => x.id === product.id);
+    //If there is only 1 product matching the id, we can use the filter method to get the rest of the products still in the cart
+    if (exist.qty === 1) {
+      setCartItems(
+        cartItems.filter(item => item.id !== product.id)
+      )
+    } else {
+      //Spread the items, remove 1 from the quantity variable
+      setCartItems(
+        cartItems.map(item => item.id === product.id ? { ...exist, qty: exist.qty - 1 } : item)
+      )
+    }
+  }
+
   return (
     <BrowserRouter>
       <div className="App">
@@ -37,6 +55,7 @@ function App() {
           drinks={drinks}
           cartItems={cartItems}
           onAdd={onAdd}
+          onRemove={onRemove}
         />
       </div>
     </BrowserRouter>

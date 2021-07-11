@@ -1,5 +1,7 @@
 import React from 'react';
+//Reactstrap
 import { Jumbotron, Container, Row, Col, Button } from 'reactstrap';
+//NavLink
 import { NavLink } from 'react-router-dom';
 
 const MainHero = () => {

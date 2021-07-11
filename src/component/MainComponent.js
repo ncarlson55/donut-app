@@ -1,4 +1,5 @@
 import React from 'react';
+
 //Components
 import NavBar from './Navbar/NavbarComponent';
 import MainHero from './MainHero/MainHeroComponent';
@@ -17,20 +18,29 @@ function Main(props) {
         <Route exact path="/home" component={MainHero} />
         <Route
           path="/donuts"
-          render={(donuts) => <DonutMenu donuts={props.donuts} onAdd={props.onAdd}/>}
+          render={(donuts) => (
+            <DonutMenu donuts={props.donuts} onAdd={props.onAdd} />
+          )}
         />
         <Route
           path="/drinks"
-          render={(drinks) => <DrinkMenu drinks={props.drinks} onAdd={props.onAdd}/>}
+          render={(drinks) => (
+            <DrinkMenu drinks={props.drinks} onAdd={props.onAdd} />
+          )}
         />
         <Route
           exact
           path="/checkout"
-          render={(cartItems) => <Checkout cartItems={props.cartItems} onAdd={props.onAdd}/>}
+          render={(cartItems) => (
+            <Checkout
+              cartItems={props.cartItems}
+              onAdd={props.onAdd}
+              onRemove={props.onRemove}
+            />
+          )}
         />
         <Redirect to="/home" />
       </Switch>
-      <Checkout cartItems={props.cartItems} onAdd={props.onAdd}/>
       <p>To Do List For App</p>
       <ol>
         <li>Cart/Checkout Component</li>
