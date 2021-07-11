@@ -14,28 +14,26 @@ function Main(props) {
     <div>
       <NavBar />
       <Switch>
-        <Route path="/home" component={MainHero} />
+        <Route exact path="/home" component={MainHero} />
         <Route
-          exact
           path="/donuts"
           render={(donuts) => <DonutMenu donuts={props.donuts} onAdd={props.onAdd}/>}
         />
         <Route
-          exact
           path="/drinks"
           render={(drinks) => <DrinkMenu drinks={props.drinks} onAdd={props.onAdd}/>}
         />
-        {/* <Route
+        <Route
           exact
           path="/checkout"
           render={(cartItems) => <Checkout cartItems={props.cartItems} onAdd={props.onAdd}/>}
-        /> */}
+        />
         <Redirect to="/home" />
       </Switch>
       <Checkout cartItems={props.cartItems} onAdd={props.onAdd}/>
       <p>To Do List For App</p>
       <ol>
-        <li>functions where you can add items to cart</li>
+        <li>Issue: cart empties when switching between menus or checking cart</li>
         <li>Cart/Checkout Component</li>
         <li>Cart Badge</li>
         <li>

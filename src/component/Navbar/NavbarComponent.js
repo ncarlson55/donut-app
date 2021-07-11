@@ -7,8 +7,8 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
 } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 //Icons
 import FreeBreakfastIcon from '@material-ui/icons/FreeBreakfast';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
@@ -21,7 +21,7 @@ const NavBar = () => {
   return (
     <div>
       <Navbar color="dark" dark expand="md">
-        <NavbarBrand href="/home">
+        <NavbarBrand to="/home">
           <FreeBreakfastIcon />
           JiffyDonut
         </NavbarBrand>
@@ -29,15 +29,15 @@ const NavBar = () => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mx-auto" navbar>
             <NavItem>
-              <NavLink href="/donuts">Donut Menu</NavLink>
+              <NavLink  to="/donuts">Donut Menu</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/drinks">Drink Menu</NavLink>
+              <NavLink to="/drinks">Drink Menu</NavLink>
             </NavItem>
           </Nav>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink href="/checkout">
+              <NavLink to="/checkout">
                 <ShoppingCartIcon />
               </NavLink>
             </NavItem>

@@ -5,9 +5,11 @@ import DrinkData from './data/DrinkData';
 import { useState } from 'react';
 
 function App() {
+  
   //Destructure data to pass down
   const { donuts } = DonutData;
   const { drinks } = DrinkData;
+
   //Set state
   const [cartItems, setCartItems] = useState([]);
   //Add to Cart function to pass down to DonutMenu and DrinkMenu Component
