@@ -33,19 +33,18 @@ function Main(props) {
       <Checkout cartItems={props.cartItems} onAdd={props.onAdd}/>
       <p>To Do List For App</p>
       <ol>
-        <li>Issue: cart empties when switching between menus or checking cart</li>
         <li>Cart/Checkout Component</li>
         <li>Cart Badge</li>
         <li>
           Checkout Component, Click on cart can slide a drawer with checkout
           button can the route to ShoppingCart Component, rename later
         </li>
-        <li>State managment, Redux maybe?</li>
         <li>
           When toggling viewports, can we hide shopping cart icon and replace
           with text?
         </li>
         <li>Get cards to stay at fixed length when viewports get larger</li>
+        <li>Fix id issue.</li>
         <li>Optional: Dry Principle, can we map out our routers???</li>
       </ol>
     </div>

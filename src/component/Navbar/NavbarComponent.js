@@ -21,7 +21,7 @@ const NavBar = () => {
   return (
     <div>
       <Navbar color="dark" dark expand="md">
-        <NavbarBrand to="/home">
+        <NavbarBrand href="/home">
           <FreeBreakfastIcon />
           JiffyDonut
         </NavbarBrand>
