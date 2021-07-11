@@ -3,7 +3,8 @@ import { Container, Row, Col, Button } from 'reactstrap';
 
 function Checkout(props) {
   const { cartItems, onAdd, onRemove } = props;
-  //Variables for setting up Checkout 
+
+  //Pricing Variables
   const itemsPrice = cartItems.reduce(
     (acc, curr) => acc + curr.price * curr.qty,
     0

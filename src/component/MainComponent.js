@@ -43,15 +43,13 @@ function Main(props) {
       </Switch>
       <p>To Do List For App</p>
       <ol>
-        <li>Cart/Checkout Component</li>
         <li>Cart Badge</li>
         <li>
           Checkout Component, Click on cart can slide a drawer with checkout
           button can the route to ShoppingCart Component, rename later
         </li>
         <li>
-          When toggling viewports, can we hide shopping cart icon and replace
-          with text?
+          Notification on item card when the item is added to cart
         </li>
         <li>Styling</li>
         <li>Get cards to stay at fixed length when viewports get larger</li>
