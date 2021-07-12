@@ -43,7 +43,6 @@ function Main(props) {
       </Switch>
       <p>To Do List For App</p>
       <ol>
-        <li>Issue with Cart badge, only updates # of products not quantity of cart</li>
         <li>Notification on item card when the item is added to cart</li>
         <li>Styling</li>
         <li>Get cards to stay at fixed length when viewports get larger</li>
