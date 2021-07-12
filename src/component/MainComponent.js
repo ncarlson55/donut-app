@@ -13,7 +13,7 @@ import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 function Main(props) {
   return (
     <div>
-      <NavBar countCartItems={props.countCartItems} />
+      <NavBar sumCartQty={props.sumCartQty} />
       <Switch>
         <Route exact path="/home" component={MainHero} />
         <Route
@@ -43,10 +43,8 @@ function Main(props) {
       </Switch>
       <p>To Do List For App</p>
       <ol>
-        <li>Cart Badge</li>
-        <li>
-          Notification on item card when the item is added to cart
-        </li>
+        <li>Issue with Cart badge, only updates # of products not quantity of cart</li>
+        <li>Notification on item card when the item is added to cart</li>
         <li>Styling</li>
         <li>Get cards to stay at fixed length when viewports get larger</li>
         <li>

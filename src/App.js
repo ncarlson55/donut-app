@@ -47,6 +47,12 @@ function App() {
     }
   }
 
+  //function that sums the qty.value whenenver products is added or removed from state
+  const sumCartQty = cartItems.reduce((acc, item) => {
+    return acc + item.qty
+  }, 0)
+
+  console.log(cartItems, sumCartQty)
   return (
     <BrowserRouter>
       <div className="App">
@@ -56,7 +62,7 @@ function App() {
           cartItems={cartItems}
           onAdd={onAdd}
           onRemove={onRemove}
-          countCartItems={cartItems.length}
+          sumCartQty={sumCartQty}
         />
       </div>
     </BrowserRouter>

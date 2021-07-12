@@ -28,7 +28,7 @@ const NavBar = (props) => {
             JiffyDonut
           </NavLink>
         </NavbarBrand>
-        <div style={{ paddingRight: '20px', paddingTop: "15px" }}>
+        <div style={{ paddingRight: '15px', paddingTop: '15px' }}>
           <Badge badgeContent={props.countCartItems} color="primary">
             <NavbarToggler onClick={toggle} />
           </Badge>
@@ -43,9 +43,13 @@ const NavBar = (props) => {
             </NavItem>
           </Nav>
           <Nav className="ml-auto" navbar>
-            <NavItem style={{ paddingRight: '20px' }}>
+            <NavItem style={{ paddingRight: '15px' }}>
               <NavLink to="/checkout">
-                <Badge badgeContent={props.countCartItems} color="primary">
+                <Badge
+                  badgeContent={props.sumCartQty}
+                  color="primary"
+                  overlap="circular"
+                >
                   <ShoppingCartIcon />
                 </Badge>
               </NavLink>
