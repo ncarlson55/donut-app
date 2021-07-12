@@ -12,8 +12,9 @@ import { NavLink } from 'react-router-dom';
 //Icons
 import FreeBreakfastIcon from '@material-ui/icons/FreeBreakfast';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import Badge from '@material-ui/core/Badge';
 
-const NavBar = () => {
+const NavBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -38,9 +39,11 @@ const NavBar = () => {
             </NavItem>
           </Nav>
           <Nav className="ml-auto" navbar>
-            <NavItem>
+            <NavItem style={{paddingRight: "10px"}}>
               <NavLink to="/checkout">
-                <ShoppingCartIcon />
+                <Badge badgeContent={props.countCartItems} color="primary">
+                  <ShoppingCartIcon />
+                </Badge>
               </NavLink>
             </NavItem>
           </Nav>

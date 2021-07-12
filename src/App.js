@@ -56,6 +56,7 @@ function App() {
           cartItems={cartItems}
           onAdd={onAdd}
           onRemove={onRemove}
+          countCartItems={cartItems.length}
         />
       </div>
     </BrowserRouter>

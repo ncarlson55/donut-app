@@ -13,7 +13,7 @@ import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 function Main(props) {
   return (
     <div>
-      <NavBar />
+      <NavBar countCartItems={props.countCartItems} />
       <Switch>
         <Route exact path="/home" component={MainHero} />
         <Route
@@ -45,14 +45,14 @@ function Main(props) {
       <ol>
         <li>Cart Badge</li>
         <li>
-          Checkout Component, Click on cart can slide a drawer with checkout
-          button can the route to ShoppingCart Component, rename later
-        </li>
-        <li>
           Notification on item card when the item is added to cart
         </li>
         <li>Styling</li>
         <li>Get cards to stay at fixed length when viewports get larger</li>
+        <li>
+          Checkout Component, Click on cart can slide a drawer with checkout
+          button can the route to ShoppingCart Component, rename later
+        </li>
         <li>Fix id issue.</li>
         <li>Optional: Dry Principle, can we map out our routers???</li>
       </ol>
