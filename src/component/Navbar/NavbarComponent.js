@@ -28,18 +28,22 @@ const NavBar = (props) => {
             JiffyDonut
           </NavLink>
         </NavbarBrand>
-        <NavbarToggler onClick={toggle} />
+        <div style={{ paddingRight: '20px', paddingTop: "15px" }}>
+          <Badge badgeContent={props.countCartItems} color="primary">
+            <NavbarToggler onClick={toggle} />
+          </Badge>
+        </div>
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mx-auto" navbar>
             <NavItem>
-              <NavLink  to="/donuts">Donut Menu</NavLink>
+              <NavLink to="/donuts">Donut Menu</NavLink>
             </NavItem>
             <NavItem>
               <NavLink to="/drinks">Drink Menu</NavLink>
             </NavItem>
           </Nav>
           <Nav className="ml-auto" navbar>
-            <NavItem style={{paddingRight: "10px"}}>
+            <NavItem style={{ paddingRight: '20px' }}>
               <NavLink to="/checkout">
                 <Badge badgeContent={props.countCartItems} color="primary">
                   <ShoppingCartIcon />
