@@ -47,10 +47,10 @@ function Main(props) {
         <li>Styling</li>
         <li>Get cards to stay at fixed length when viewports get larger</li>
         <li>
-          Checkout Component, Click on cart can slide a drawer with checkout
-          button can the route to ShoppingCart Component, rename later
+          Checkout feature.
         </li>
         <li>Fix id issue.</li>
+        <li>Fix toggle badge issue</li>
         <li>Optional: Dry Principle, can we map out our routers???</li>
       </ol>
     </div>
