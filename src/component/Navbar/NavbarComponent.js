@@ -29,7 +29,7 @@ const NavBar = (props) => {
           </NavLink>
         </NavbarBrand>
         <div style={{ paddingRight: '15px', paddingTop: '15px' }}>
-          <Badge badgeContent={props.sumCartQty} color="primary">
+          <Badge color="secondary" variant="dot" badgeContent={props.sumCartQty}>
             <NavbarToggler onClick={toggle} />
           </Badge>
         </div>

@@ -43,15 +43,10 @@ function Main(props) {
       </Switch>
       <p>To Do List For App</p>
       <ol>
-        <li>Notification on item card when the item is added to cart</li>
         <li>Styling</li>
         <li>Get cards to stay at fixed length when viewports get larger</li>
-        <li>
-          Checkout feature.
-        </li>
+        <li>Checkout feature.</li>
         <li>Fix id issue.</li>
-        <li>Fix toggle badge issue</li>
-        <li>Optional: Dry Principle, can we map out our routers???</li>
       </ol>
     </div>
   );
