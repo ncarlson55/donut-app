@@ -40,8 +40,8 @@ const NavBar = (props) => {
   );
 
   return (
-    <div>
-      <Navbar color="dark" dark expand="md">
+    <>
+      <Navbar color="dark" dark expand="md" sticky={'top'}>
         <NavbarBrand>
           <NavLink to="/home">
             <FreeBreakfastIcon />
@@ -73,7 +73,7 @@ const NavBar = (props) => {
           </Nav>
         </Collapse>
       </Navbar>
-    </div>
+    </>
   );
 };
 
