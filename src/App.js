@@ -6,8 +6,6 @@ import { useState } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-toast.configure();
-
 function App() {
   //Destructure data to pass down
   const { donuts } = DonutData;
@@ -17,6 +15,7 @@ function App() {
   const [cartItems, setCartItems] = useState([]);
 
   //Toastify notification when product is added to cart
+  toast.configure();
   const notifyAddCart = (productName) => {
     toast.success(`${productName} added to cart!`, {
       position: toast.POSITION.TOP_CENTER,

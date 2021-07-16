@@ -46,7 +46,9 @@ function Main(props) {
         <li>Styling</li>
         <li>Get cards to stay at fixed length when viewports get larger</li>
         <li>Checkout feature.</li>
-        <li>Fix id issue.</li>
+        <li>Sticky Footer with routes to social media</li>
+        <li>Host App</li>
+        <li>Work on Readme</li>
       </ol>
     </div>
   );
