@@ -7,11 +7,13 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 //NavLink
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+//CSS
+import './MainHeroComponent.css'
 
 const MainHero = () => {
   return (
-    <div>
+    <div className="background">
       <Jumbotron fluid>
         <Container maxWidth="sm">
           <Typography
@@ -34,18 +36,18 @@ const MainHero = () => {
           <Container fluid>
             <Grid container spacing={2} justifyContent="center">
               <Grid item>
-                <NavLink to="/donuts">
+                <Link to="/donuts" style={{ textDecoration: 'none' }}>
                   <Button variant="contained" color="primary">
                     Donut Menu
                   </Button>
-                </NavLink>
+                </Link>
               </Grid>
               <Grid item>
-                <NavLink to="/drinks">
+                <Link to="/drinks" style={{ textDecoration: 'none' }}>
                   <Button variant="contained" color="primary">
                     Drink Menu
                   </Button>
-                </NavLink>
+                </Link>
               </Grid>
             </Grid>
           </Container>
