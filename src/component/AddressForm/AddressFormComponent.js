@@ -3,8 +3,6 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -31,13 +29,8 @@ function AddressForm(props) {
 
   const numInCart = `In Cart: ${sumCartQty}`;
 
-  const reset = () => {
-      
-  }
-
   const onSubmit = () => {
       alert('Your order is confirmed! We emailed you a copy of your receipt. We will text you when your order is out for delivery! ');
-      reset();
   }
 
   return (
