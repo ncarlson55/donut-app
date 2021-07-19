@@ -1,17 +1,49 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
 import { Button } from 'reactstrap';
 
 import { Link } from 'react-router-dom';
 
+const useStyles = makeStyles((theme) => ({
+  listItem: {
+    padding: theme.spacing(1, 2),
+  },
+  numberFontWeight: {
+    fontWeight: 700,
+  },
+  title: {
+    marginTop: theme.spacing(2),
+  },
+}));
 
-function AddressForm() {
+function AddressForm(props) {
+  const classes = useStyles();
+
+  const { totalPrice, sumCartQty } = props;
+
+  const numInCart = `In Cart: ${sumCartQty}`;
+
   return (
     <React.Fragment>
+      <Typography variant="h6" gutterBottom>
+        Order Details
+      </Typography>
+      <List gutterTop>
+        <ListItem className={classes.listItem}>
+          <ListItemText primary="Total Price:" secondary={numInCart} />
+          <Typography variant="subtitle1" className={classes.numberFontWeight}>
+            ${totalPrice.toFixed(2)}
+          </Typography>
+        </ListItem>
+      </List>
       <Typography variant="h6" gutterBottom>
         Shipping address
       </Typography>
@@ -104,7 +136,9 @@ function AddressForm() {
           />
         </Grid>
       </Grid>
-      <Link to="/shoppingCart"><Button>Back</Button></Link>
+      <Link to="/shoppingCart">
+        <Button>Back</Button>
+      </Link>
       <Button>Submit Order</Button>
     </React.Fragment>
   );

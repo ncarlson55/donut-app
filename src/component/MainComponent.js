@@ -50,7 +50,18 @@ function Main(props) {
             />
           )}
         />
-        <Route exact path="/addressForm" component={AddressForm} />
+        <Route
+          exact
+          path="/addressForm"
+          render={(cartItems) => (
+            <AddressForm
+              onAdd={props.onAdd}
+              onRemove={props.onRemove}
+              totalPrice={props.totalPrice}
+              sumCartQty={props.sumCartQty}
+            />
+          )}
+        />
         <Redirect to="/home" />
       </Switch>
     </div>
