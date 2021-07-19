@@ -31,6 +31,15 @@ function AddressForm(props) {
 
   const numInCart = `In Cart: ${sumCartQty}`;
 
+  const reset = () => {
+      
+  }
+
+  const onSubmit = () => {
+      alert('Your order is confirmed! We emailed you a copy of your receipt. We will text you when your order is out for delivery! ');
+      reset();
+  }
+
   return (
     <React.Fragment>
       <Typography variant="h6" gutterBottom>
@@ -47,7 +56,7 @@ function AddressForm(props) {
       <Typography variant="h6" gutterBottom>
         Shipping address
       </Typography>
-      <Grid container spacing={3}>
+      <Grid container spacing={3} gutterBottom>
         <Grid item xs={12} sm={6}>
           <TextField
             required
@@ -117,7 +126,7 @@ function AddressForm(props) {
             autoComplete="phone number"
           />
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={6} gutterBottom>
           <TextField
             required
             id="email"
@@ -127,19 +136,11 @@ function AddressForm(props) {
             autoComplete="email"
           />
         </Grid>
-        <Grid item xs={12}>
-          <FormControlLabel
-            control={
-              <Checkbox color="secondary" name="saveAddress" value="yes" />
-            }
-            label="Use this address for payment details"
-          />
-        </Grid>
       </Grid>
       <Link to="/shoppingCart">
         <Button>Back</Button>
       </Link>
-      <Button>Submit Order</Button>
+      <Button onClick={() => onSubmit()}>Submit Order</Button>
     </React.Fragment>
   );
 }
