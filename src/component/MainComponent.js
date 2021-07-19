@@ -6,6 +6,8 @@ import MainHero from './MainHero/MainHeroComponent';
 import DonutMenu from './DonutMenu/DonutMenuComponent';
 import DrinkMenu from './DrinkMenu/DrinkMenuComponent';
 import ShoppingCart from './ShoppingCart/ShoppingCartComponent';
+import AddressForm from './AddressForm/AddressFormComponent';
+import OrderReview from './OrderReview/OrderReviewComponent';
 
 //React Router
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
@@ -19,13 +21,13 @@ function Main(props) {
         <Route
           path="/donuts"
           render={(donuts) => (
-            <DonutMenu donuts={props.donuts} onAdd={props.onAdd} />
+            <DonutMenu donuts={props.donuts} onAddwithToastNotification={props.onAddwithToastNotification} />
           )}
         />
         <Route
           path="/drinks"
           render={(drinks) => (
-            <DrinkMenu drinks={props.drinks} onAdd={props.onAdd} />
+            <DrinkMenu drinks={props.drinks} onAddwithToastNotification={props.onAddwithToastNotification} />
           )}
         />
         <Route
@@ -39,6 +41,8 @@ function Main(props) {
             />
           )}
         />
+        <Route exact path="/addressForm" component={AddressForm} />
+        <Route exact path="/orderReview" component={OrderReview} />
         <Redirect to="/home" />
       </Switch>
     </div>

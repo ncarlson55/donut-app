@@ -20,7 +20,7 @@ function DrinkMenu(props) {
           <CardBody>
             <CardTitle tag="h6">{drink.name}</CardTitle>
             <CardText>${drink.price}</CardText>
-            <Button onClick={() => props.onAdd(drink)}>Add To Cart</Button>
+            <Button onClick={() => props.onAddwithToastNotification(drink)}>Add To Cart</Button>
           </CardBody>
         </Card>
       </Col>

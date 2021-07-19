@@ -5,6 +5,9 @@ import Typography from '@material-ui/core/Typography';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import { Button } from 'reactstrap';
+//Router
+import { Link } from 'react-router-dom';
 
 //Icon Imports
 import AddCircleIcon from '@material-ui/icons/AddCircle';
@@ -109,6 +112,9 @@ function ShoppingCart(props) {
                   ${totalPrice.toFixed(2)}
                 </Typography>
               </ListItem>
+              <Link to="/addressForm">
+                <Button>Click to Checkout!</Button>
+              </Link>
             </List>
           )}
         </div>

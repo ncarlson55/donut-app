@@ -23,12 +23,6 @@ function App() {
     });
   };
 
-  const notifyRemoveCart = (productName) => {
-    toast.error(`${productName} removed from cart!`, {
-      position: toast.POSITION.TOP_CENTER,
-      autoClose: 2000,
-    });
-  };
 
   //Add to Cart function to pass down to DonutMenu and DrinkMenu Component
   const onAdd = (product) => {
@@ -45,7 +39,11 @@ function App() {
     } else {
       setCartItems([...cartItems, { ...product, qty: 1 }]);
     }
-    //calll notification
+  };
+
+  const onAddwithToastNotification = (product) => {
+    onAdd(product);
+    //call notification
     notifyAddCart(product.name);
   };
 
@@ -64,7 +62,6 @@ function App() {
         )
       );
     }
-    notifyRemoveCart(product.name);
   };
 
   //function that sums the qty.value whenenver products are added or removed from state
@@ -72,7 +69,6 @@ function App() {
     return acc + item.qty;
   }, 0);
 
-  console.log(cartItems, sumCartQty);
   return (
     <BrowserRouter>
       <div className="App">
@@ -81,6 +77,7 @@ function App() {
           drinks={drinks}
           cartItems={cartItems}
           onAdd={onAdd}
+          onAddwithToastNotification={onAddwithToastNotification}
           onRemove={onRemove}
           sumCartQty={sumCartQty}
         />
