@@ -69,6 +69,15 @@ function App() {
     return acc + item.qty;
   }, 0);
 
+  //Pricing Variables
+  const itemsPrice = cartItems.reduce(
+    (acc, curr) => acc + curr.price * curr.qty,
+    0
+  );
+  const tax = itemsPrice * 0.08;
+  const deliveryPrice = itemsPrice > 50 ? 0 : 5.99;
+  const totalPrice = itemsPrice + tax + deliveryPrice;
+
   return (
     <BrowserRouter>
       <div className="App">
@@ -80,6 +89,10 @@ function App() {
           onAddwithToastNotification={onAddwithToastNotification}
           onRemove={onRemove}
           sumCartQty={sumCartQty}
+          itemsPrice={itemsPrice}
+          tax={tax}
+          deliveryPrice={deliveryPrice}
+          totalPrice={totalPrice}
         />
       </div>
     </BrowserRouter>

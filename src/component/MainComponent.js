@@ -7,7 +7,6 @@ import DonutMenu from './DonutMenu/DonutMenuComponent';
 import DrinkMenu from './DrinkMenu/DrinkMenuComponent';
 import ShoppingCart from './ShoppingCart/ShoppingCartComponent';
 import AddressForm from './AddressForm/AddressFormComponent';
-import OrderReview from './OrderReview/OrderReviewComponent';
 
 //React Router
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
@@ -21,13 +20,19 @@ function Main(props) {
         <Route
           path="/donuts"
           render={(donuts) => (
-            <DonutMenu donuts={props.donuts} onAddwithToastNotification={props.onAddwithToastNotification} />
+            <DonutMenu
+              donuts={props.donuts}
+              onAddwithToastNotification={props.onAddwithToastNotification}
+            />
           )}
         />
         <Route
           path="/drinks"
           render={(drinks) => (
-            <DrinkMenu drinks={props.drinks} onAddwithToastNotification={props.onAddwithToastNotification} />
+            <DrinkMenu
+              drinks={props.drinks}
+              onAddwithToastNotification={props.onAddwithToastNotification}
+            />
           )}
         />
         <Route
@@ -38,11 +43,14 @@ function Main(props) {
               cartItems={props.cartItems}
               onAdd={props.onAdd}
               onRemove={props.onRemove}
+              itemsPrice={props.itemsPrice}
+              tax={props.tax}
+              deliveryPrice={props.deliveryPrice}
+              totalPrice={props.totalPrice}
             />
           )}
         />
         <Route exact path="/addressForm" component={AddressForm} />
-        <Route exact path="/orderReview" component={OrderReview} />
         <Redirect to="/home" />
       </Switch>
     </div>

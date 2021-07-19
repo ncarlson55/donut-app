@@ -28,16 +28,7 @@ const useStyles = makeStyles((theme) => ({
 function ShoppingCart(props) {
   const classes = useStyles();
 
-  const { cartItems, onAdd, onRemove } = props;
-
-  //Pricing Variables
-  const itemsPrice = cartItems.reduce(
-    (acc, curr) => acc + curr.price * curr.qty,
-    0
-  );
-  const tax = itemsPrice * 0.08;
-  const deliveryPrice = itemsPrice > 50 ? 0 : 5.99;
-  const totalPrice = itemsPrice + tax + deliveryPrice;
+  const { cartItems, onAdd, onRemove, tax, itemsPrice, deliveryPrice, totalPrice } = props;
 
   return (
     <React.Fragment>
