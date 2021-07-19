@@ -7,8 +7,12 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
+  NavLink,
+  Button,
 } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
+//
+import { Badge as ReactstrapBadge } from 'reactstrap';
+import { Link } from 'react-router-dom';
 //Icons
 import FreeBreakfastIcon from '@material-ui/icons/FreeBreakfast';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
@@ -21,54 +25,59 @@ const NavBar = (props) => {
 
   const toggle = () => setIsOpen(!isOpen);
 
+  //Variables that respond to toggle change
   const CartIcon = (
-    <Badge badgeContent={props.sumCartQty} color="primary" overlap="circular">
-      <ShoppingCartIcon />
-    </Badge>
+    <Button>
+      <Badge badgeContent={props.sumCartQty} color="primary" overlap="circular">
+        <ShoppingCartIcon />
+      </Badge>
+    </Button>
   );
+
   const CartName = (
-    <Badge
-      badgeContent={props.sumCartQty}
-      color="primary"
-      anchorOrigin={{
-        vertical: 'bottom',
-        horizontal: 'right',
-      }}
-    >
-      Shopping Cart
-    </Badge>
+    <div>
+      <Button>
+        Shopping Cart <ReactstrapBadge>{props.sumCartQty}</ReactstrapBadge>
+      </Button>
+    </div>
   );
 
   return (
     <>
       <Navbar color="dark" dark expand="md" sticky={'top'}>
         <NavbarBrand>
-          <NavLink to="/home">
-            <FreeBreakfastIcon />
-            JiffyDonut
+          <NavLink>
+            <Link to="/home">
+              <Button>
+                <FreeBreakfastIcon />
+                JiffyDonut
+              </Button>
+            </Link>
           </NavLink>
         </NavbarBrand>
-        <div style={{ paddingRight: '15px', paddingTop: '15px' }}>
-          <Badge
-            color="secondary"
-            variant="dot"
-            badgeContent={props.sumCartQty}
-          >
-            <NavbarToggler onClick={toggle} />
-          </Badge>
-        </div>
+        <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mx-auto" navbar>
             <NavItem>
-              <NavLink to="/donuts">Donut Menu</NavLink>
+              <NavLink>
+                <Link to="/donuts">
+                  <Button>Donut Menu</Button>
+                </Link>
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/drinks">Drink Menu</NavLink>
+              <NavLink>
+                <Link to="/drinks">
+                  <Button>Drink Menu</Button>
+                </Link>
+              </NavLink>
             </NavItem>
           </Nav>
           <Nav className="ml-auto" navbar>
             <NavItem style={{ paddingRight: '15px' }}>
-              <NavLink to="/checkout">{!isOpen ? CartIcon : CartName}</NavLink>
+              <NavLink>
+                <Link to="/checkout">{!isOpen ? CartIcon : CartName}</Link>
+              </NavLink>
             </NavItem>
           </Nav>
         </Collapse>
