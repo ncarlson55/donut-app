@@ -105,7 +105,7 @@ function AddressForm() {
         </Grid>
       </Grid>
       <Link to="/shoppingCart"><Button>Back</Button></Link>
-      <Link to="/orderReview"><Button>Review Order</Button></Link>
+<Button>Submit Order</Button>
     </React.Fragment>
   );
 }
