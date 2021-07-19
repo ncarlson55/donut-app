@@ -5,7 +5,7 @@ import NavBar from './Navbar/NavbarComponent';
 import MainHero from './MainHero/MainHeroComponent';
 import DonutMenu from './DonutMenu/DonutMenuComponent';
 import DrinkMenu from './DrinkMenu/DrinkMenuComponent';
-import Checkout from './Checkout/Checkout';
+import ShoppingCart from './ShoppingCart/ShoppingCartComponent';
 
 //React Router
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
@@ -30,9 +30,9 @@ function Main(props) {
         />
         <Route
           exact
-          path="/checkout"
+          path="/shoppingCart"
           render={(cartItems) => (
-            <Checkout
+            <ShoppingCart
               cartItems={props.cartItems}
               onAdd={props.onAdd}
               onRemove={props.onRemove}
@@ -41,15 +41,6 @@ function Main(props) {
         />
         <Redirect to="/home" />
       </Switch>
-      <p>To Do List For App</p>
-      <ol>
-        <li>Styling</li>
-        <li>Get cards to stay at fixed length when viewports get larger</li>
-        <li>Checkout feature.</li>
-        <li>Sticky Footer with routes to social media</li>
-        <li>Host App</li>
-        <li>Work on Readme</li>
-      </ol>
     </div>
   );
 }

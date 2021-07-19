@@ -76,7 +76,7 @@ const NavBar = (props) => {
           <Nav className="ml-auto" navbar>
             <NavItem style={{ paddingRight: '15px' }}>
               <NavLink>
-                <Link to="/checkout">{!isOpen ? CartIcon : CartName}</Link>
+                <Link to="/shoppingCart">{!isOpen ? CartIcon : CartName}</Link>
               </NavLink>
             </NavItem>
           </Nav>
