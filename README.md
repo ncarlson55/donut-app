@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+# Nucamp React Honor Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hi, my name is Nico Carlson and this is my frontend ui ecommerce app built with react!
 
-## Available Scripts
+The inspiration behind the app was that before I started the Nucamp Coding Bootcamp, as a side hustle, I ran a donut-delivery business in my small town! About 99 percent of my business came through facebook. I knew relying on social media for business could hurt me, so I wanted to build a website people can place their order. 
 
-In the project directory, you can run:
+### Built with
+-React: Relied heavily on Material UI and Reactstrap for the layouts and the icons. I was thinking mobile-first because most of my previous customers made the orders on their phone. I also found a notification library called Tostify that had small pop-up notifications when users add items to the cart.
 
-### `yarn start`
+## The challenge
+- I wanted to learn Material UI and I underestimated how much time I needed to learn, especially the makeStyles process that Material UI uses. 
+- I hate to admit it but I struggled with writing functions for adding and removing cart items. I watched several different videos of developers showing how they used functions to add and remove items to the cart, as well reading through several Stack Overflow solutions.
+- I had to change libraries a couple of times because I initially was using React Bootstrap and it was crashing my project. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### What I learned
+- Even the I didn't style the UI and it is a relatively simple, basic project, I really enjoyed actually building something that I can call my own. Learning how to Google can be its own study! 
+- This project also reinforced 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Continued development
+- I plan to continue building depth of knowledge in the React ecosystem. I enjoyed seeing React can take data and render functional UI elements with relative ease and I am going to build more projects with React.
+- I now see the importance of state management for React. I found myself working on state for a component and then realizing I need this state for other components and had to go through that process of lifting state up to my App.js file. Redux was challenging to learn during the bootcamp but I feel its fundamental to learn as these projects start to scale.
+- Because I struggled with coming writing functions on my own, I plan learning more about algorithms and practice writing functions. I feel like this will of great importance going forward in my career. 
+- Designing ended up being my krytonite. I realized having good wireframes/mockups helps breakdown the project into smaller pieces, which I believe would have been alot easier to code. I found a community called Frontend Mentor that will help with that process.
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Author
+- Github - [Nico Carlson](https://github.com/ncarlson55)
