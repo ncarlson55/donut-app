@@ -82,7 +82,7 @@ const donutData = {
       image: chocolateCustardFilled,
     },
     {
-      id: 12,
+      id: 11,
       name: 'Donut Holes x12 ',
       price: 0.99,
       image: donutHoles,

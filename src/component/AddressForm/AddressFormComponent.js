@@ -30,8 +30,11 @@ function AddressForm(props) {
   const numInCart = `In Cart: ${sumCartQty}`;
 
   const onSubmit = () => {
-      alert('Your order is confirmed! We emailed you a copy of your receipt. We will text you when your order is out for delivery! ');
-  }
+    alert(
+      'Your order is confirmed! We emailed you a copy of your receipt. We will text you when your order is out for delivery! '
+    );
+    window.location.reload(false);
+  };
 
   return (
     <React.Fragment>
